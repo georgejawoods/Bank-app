@@ -5,6 +5,7 @@ import (
 	db "bankapp/db/sqlc"
 	"bankapp/util"
 	"bytes"
+	"database/sql"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
