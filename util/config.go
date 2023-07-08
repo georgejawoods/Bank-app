@@ -2,14 +2,14 @@ package util
 
 import "github.com/spf13/viper"
 
-//Stores all configurations for viper
+// Stores all configurations for viper
 type Config struct {
 	DBDriver      string `mapstructure:"DB_DRIVER"`
 	DBSource      string `mapstructure:"DB_SOURCE"`
 	ServerAddress string `mapstructure:"SERVER_ADDRESS"`
 }
 
-//Read configurations from file or variables
+// Read configurations from file or variables
 func LoadConfig(path string) (config Config, err error) {
 	viper.AddConfigPath(path)
 	viper.SetConfigName("app")
