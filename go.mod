@@ -4,11 +4,12 @@ go 1.20
 
 require (
 	github.com/gin-gonic/gin v1.9.1
-	github.com/go-playground/validator/v10 v10.14.0
+	github.com/go-playground/validator/v10 v10.14.1
 	github.com/golang/mock v1.6.0
 	github.com/lib/pq v1.10.9
 	github.com/spf13/viper v1.16.0
 	github.com/stretchr/testify v1.8.4
+	golang.org/x/crypto v0.11.0
 )
 
 require (
@@ -40,10 +41,9 @@ require (
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ugorji/go/codec v1.2.11 // indirect
 	golang.org/x/arch v0.3.0 // indirect
-	golang.org/x/crypto v0.9.0 // indirect
 	golang.org/x/net v0.10.0 // indirect
-	golang.org/x/sys v0.8.0 // indirect
-	golang.org/x/text v0.9.0 // indirect
+	golang.org/x/sys v0.10.0 // indirect
+	golang.org/x/text v0.11.0 // indirect
 	google.golang.org/protobuf v1.30.0 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
