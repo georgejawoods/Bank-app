@@ -28,4 +28,7 @@ server:
 mock:
 	mockgen -package mockdb -destination db/mock/store.go bankapp/db/sqlc Store
 
-.PHONY: postgres createdb dropdb migrateup migratedown migrateup1 migratedown1 sqlc server mock
+test:
+	go test -v -cover -short ./...
+
+.PHONY: postgres createdb dropdb migrateup migratedown migrateup1 migratedown1 sqlc server mock test
