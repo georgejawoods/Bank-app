@@ -1,13 +1,12 @@
 package main
 
 import (
-	"bankapp/api"
-	db "bankapp/db/sqlc"
-	"bankapp/util"
 	"database/sql"
 	"log"
 
-	_ "github.com/lib/pq"
+	"github.com/georgejawoods/Bank-app/api"
+	db "github.com/georgejawoods/Bank-app/db/sqlc"
+	"github.com/georgejawoods/Bank-app/util"
 )
 
 func main() {

@@ -1,11 +1,12 @@
 package db
 
 import (
-	"bankapp/util"
 	"database/sql"
 	"log"
 	"os"
 	"testing"
+
+	"github.com/georgejawoods/Bank-app/util"
 
 	_ "github.com/lib/pq"
 )

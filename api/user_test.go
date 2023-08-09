@@ -1,14 +1,15 @@
 package api
 
 import (
-	db "bankapp/db/sqlc"
-	"bankapp/util"
 	"bytes"
 	"encoding/json"
 	"fmt"
 	"io"
 	"reflect"
 	"testing"
+
+	db "github.com/georgejawoods/Bank-app/db/sqlc"
+	"github.com/georgejawoods/Bank-app/util"
 
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"

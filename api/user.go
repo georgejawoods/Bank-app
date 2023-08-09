@@ -1,11 +1,12 @@
 package api
 
 import (
-	db "bankapp/db/sqlc"
-	"bankapp/util"
 	"database/sql"
 	"net/http"
 	"time"
+
+	db "github.com/georgejawoods/Bank-app/db/sqlc"
+	"github.com/georgejawoods/Bank-app/util"
 
 	"github.com/gin-gonic/gin"
 	"github.com/lib/pq"

@@ -5,7 +5,7 @@
 package mockdb
 
 import (
-	db "bankapp/db/sqlc"
+	db "github.com/georgejawoods/Bank-app/db/sqlc"
 	context "context"
 	reflect "reflect"
 

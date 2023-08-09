@@ -1,10 +1,6 @@
 package api
 
 import (
-	mockdb "bankapp/db/mock"
-	db "bankapp/db/sqlc"
-	"bankapp/token"
-	"bankapp/util"
 	"bytes"
 	"database/sql"
 	"encoding/json"
@@ -14,6 +10,11 @@ import (
 	"net/http/httptest"
 	"testing"
 	"time"
+
+	mockdb "github.com/georgejawoods/Bank-app/db/mock"
+	db "github.com/georgejawoods/Bank-app/db/sqlc"
+	"github.com/georgejawoods/Bank-app/token"
+	"github.com/georgejawoods/Bank-app/util"
 
 	"github.com/gin-gonic/gin"
 	"github.com/golang/mock/gomock"

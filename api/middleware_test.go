@@ -1,12 +1,13 @@
 package api
 
 import (
-	"bankapp/token"
 	"fmt"
 	"net/http"
 	"net/http/httptest"
 	"testing"
 	"time"
+
+	"github.com/georgejawoods/Bank-app/token"
 
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/require"

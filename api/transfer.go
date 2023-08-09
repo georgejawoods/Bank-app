@@ -1,12 +1,13 @@
 package api
 
 import (
-	db "bankapp/db/sqlc"
-	"bankapp/token"
 	"database/sql"
 	"errors"
 	"fmt"
 	"net/http"
+
+	db "github.com/georgejawoods/Bank-app/db/sqlc"
+	"github.com/georgejawoods/Bank-app/token"
 
 	"github.com/gin-gonic/gin"
 )

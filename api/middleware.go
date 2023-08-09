@@ -1,11 +1,12 @@
 package api
 
 import (
-	"bankapp/token"
 	"errors"
 	"fmt"
 	"net/http"
 	"strings"
+
+	"github.com/georgejawoods/Bank-app/token"
 
 	"github.com/gin-gonic/gin"
 )

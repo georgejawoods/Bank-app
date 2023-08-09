@@ -1,9 +1,10 @@
 package token
 
 import (
-	"bankapp/util"
 	"testing"
 	"time"
+
+	"github.com/georgejawoods/Bank-app/util"
 
 	"github.com/stretchr/testify/require"
 )

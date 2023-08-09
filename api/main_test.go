@@ -1,11 +1,12 @@
 package api
 
 import (
-	db "bankapp/db/sqlc"
-	"bankapp/util"
 	"os"
 	"testing"
 	"time"
+
+	db "github.com/georgejawoods/Bank-app/db/sqlc"
+	"github.com/georgejawoods/Bank-app/util"
 
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/require"
