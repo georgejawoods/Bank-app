@@ -19,12 +19,8 @@ migratedown:
 migratedown1:
 	migrate -path db/migration -database "postgresql://Gogik:2005206a@localhost:5432/bank_app?sslmode=disable" -verbose down 1
 
-
 sqlc:
 	sqlc generate
-
-test:
-	go test -v -cover ./...
 
 server:
 	go run main.go
