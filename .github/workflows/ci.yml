@@ -43,7 +43,7 @@ jobs:
         go-version: 1.21.0
 
     - name: Setting up GO111MODULE
-      run: go env -w GO111MODULE=auto
+      run: go env -w GO111MODULE=on
     
     - name: Test
       run: make test
