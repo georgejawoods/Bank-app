@@ -8,16 +8,16 @@ dropdb:
 	docker exec -it postgres15 dropdb bank_app
 
 migrateup:
-	migrate -path db/migration -database "postgresql://Gogik:2005206a@localhost:5432/bank_app?sslmode=disable" -verbose up
+	migrate -path db/migration -database "postgresql://Gogik:secret@localhost:5432/bank_app?sslmode=disable" -verbose up
 
 migrateup1:
-	migrate -path db/migration -database "postgresql://Gogik:2005206a@localhost:5432/bank_app?sslmode=disable" -verbose up 1
+	migrate -path db/migration -database "postgresql://Gogik:secret@localhost:5432/bank_app?sslmode=disable" -verbose up 1
 
 migratedown:
-	migrate -path db/migration -database "postgresql://Gogik:2005206a@localhost:5432/bank_app?sslmode=disable" -verbose down
+	migrate -path db/migration -database "postgresql://Gogik:secret@localhost:5432/bank_app?sslmode=disable" -verbose down
 
 migratedown1:
-	migrate -path db/migration -database "postgresql://Gogik:2005206a@localhost:5432/bank_app?sslmode=disable" -verbose down 1
+	migrate -path db/migration -database "postgresql://Gogik:secret@localhost:5432/bank_app?sslmode=disable" -verbose down 1
 
 sqlc:
 	sqlc generate
