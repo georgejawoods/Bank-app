@@ -13,10 +13,10 @@ jobs:
 
     services:
       postgres:
-        image: postgres:15
+        image: postgres:15.3
         env:
           POSTGRES_USER: Gogik
-          POSTGRES_PASSWORD: 2005206a
+          POSTGRES_PASSWORD: secret
           POSTGRES_DB: bank_app
         ports:
           - 5432:5432
