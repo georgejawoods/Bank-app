@@ -1,0 +1,19 @@
+name: Deploy to GHCR
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+
+  build_and_publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build and push the image
+        run: |
+          docker login --username georgejawoods --password ${{ secrets.GH_TOKEN }} ghcr.io
+          docker build . -t ghcr.io/georgejawoods/bankapp-ghcr:latest
+          docker push ghcr.io/georgejawoods/bankapp-ghcr:latest
+      
+    
