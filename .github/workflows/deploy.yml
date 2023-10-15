@@ -1,4 +1,4 @@
-name: Deploy to GHCR
+name: Deploy to production
 
 on:
   push:
@@ -6,14 +6,26 @@ on:
 
 jobs:
 
-  build_and_publish:
+  build:
+    name: Build image
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Build and push the image
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4 # More information on this action can be found below in the 'AWS Credentials' section
+        with:
+          role-to-assume: arn:aws:iam::411992958348:role/github-ci
+          aws-region: eu-north-1
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+  
+      - name: Build, tag, and push docker image to Amazon ECR
+        env:
+          REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          REPOSITORY: bankapp
+          IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker login --username georgejawoods --password ${{ secrets.GH_TOKEN }} ghcr.io
-          docker build . -t ghcr.io/georgejawoods/bankapp-ghcr:latest
-          docker push ghcr.io/georgejawoods/bankapp-ghcr:latest
-      
-    
+          docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
+          docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
